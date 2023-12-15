@@ -1,0 +1,22 @@
+[package]
+name = "git-credential-wsl"
+version = "0.1.0"
+
+authors = ["Freyja Østrem <frx.apps@gmail.com>"]
+description = "A git credential helper fetching credentials from WSL"
+license = "MIT"
+
+edition = "2021"
+publish = false
+
+[dependencies]
+anyhow = "1.0.75"
+clap = { version = "4.4.11", features = ["derive"] }
+futures = "0.3.29"
+tokio = { version = "1.35.0", features = [
+  "io-std",
+  "io-util",
+  "macros",
+  "process",
+  "rt",
+] }
